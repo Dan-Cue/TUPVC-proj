@@ -1,0 +1,712 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c4203a;
+}
+
+.container {
+    margin: 1% 3%;
+
+}
+.top-header {
+    background-color: #777777;
+    padding: 13.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+.search-bar {
+    position: relative;
+    width: 31vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin: 0 100px;
+    border: 1px solid grey; 
+    border-radius: 15px; 
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    outline: none;
+}
+
+.icon-container {
+    margin-left: -250px ;
+}
+
+.bell-icon {
+    max-width: 1.89vw;
+    max-height: 3.76vh;
+    margin-left: -5vw;
+}
+
+.home-icon {
+    max-width: 1.89vw;
+    max-height: 3.76vh;
+    margin-left: 1.5vw;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444444;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.logout-button:hover{
+    background-color: #c4203a;
+}
+
+.top-body {
+    display: flex;
+    width: 100%;
+    height: 50vh; 
+}
+
+.profile-showcase {
+    flex: 2; 
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden; 
+    margin: 10px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+}
+
+
+.profile-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bolder;
+}
+
+.full-name,
+.course-year-section,
+.Bio {
+    margin: 5px 0;
+    color: #eeeeee;
+    text-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Bio {
+    color:#c4203a;
+}
+
+.edit-profile-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #444444;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.edit-profile-button:hover {
+    background-color: #c4203a;
+    border-color: #c4203a;
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    margin: 10px;
+    
+}
+
+.question-top{
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.question-top {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(120, 120, 120);
+    background-color: #dddddd;
+    height: 7.5vh;
+    margin: 10px;
+    text-align: center;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+}
+
+.question-box {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgb(120, 120, 120);
+    background-color: #dddddd;
+    height: 45vh;
+    margin: 10px;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.question-text {
+    margin: 5px;
+    margin-bottom: -15px;
+    padding-left: 7px;
+}
+
+.choice-button {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.2s; 
+
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.choice-button:before{
+    content: '';
+    background: linear-gradient(90deg, transparent, #c4203a, transparent);
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 100px;
+    height: 100%;
+    transition: all 1s ease;
+    z-index: -1;
+}
+
+.choice-button:hover {
+    transform: scale(1.1); 
+}
+
+.choice-button:hover:before{
+    left: 125%;
+}
+
+.contents {
+    display: flex;
+    width: 100%;
+    height: 40vh; 
+    margin-top: 20px;
+}
+
+.profile-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 2px 2px rgb(120, 120, 120);
+    height: 26vh;
+    width: 21vh;
+    background-color: whitesmoke;
+}
+
+.profile-option-button {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+
+.profile-option-button:hover {
+    color: rgb(255, 0, 0); 
+}
+
+.profile-option-button img {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px; 
+}
+
+.redeem-button{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: whitesmoke;
+}
+
+.redeem-button:hover {
+    color: #c4203a; 
+}
+
+.redeem-button img {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px; 
+}
+
+.dailypoints-btn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px 28px;
+    border-style: outset;
+    border-width: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: rgb(255, 50, 50);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding 0.3s ease, margin-top 0.3s ease, border-radius 0.3s ease, opacity 0.15s ease;
+    box-sizing: border-box;
+}
+
+.dailypoints-btn:hover{
+    background-color: rgb(225, 50, 50);
+    padding: 18px 28px;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+.dailypoints-btn:active {
+    background-color: rgb(180, 0, 0);
+    opacity: 0.5;
+}
+
+.dailypoints-btn:disabled{
+    opacity: 0.5;
+    background-color: rgb(118, 88, 88);
+    cursor: not-allowed;
+    margin-top: 15px;
+    padding: 10px 28px;
+    border-radius: 5px;
+}
+
+.dailypoints-btn img{
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay-message {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.points-display {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-weight: 100;
+    color: darkgray;
+    margin-top: 180px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    padding: 10px 28px;
+    position: absolute;
+}
+
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+    
+}
+
+
+.post-here {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(200, 200, 200);
+    background-color: #dddddd;
+    height: 10vh;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+}
+
+.user-profile {
+    margin-right: 10px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.post-input textarea {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; 
+}
+
+.post-button {
+    padding: 5px 10px;
+    background-color: #c4203a;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.post-button:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.main-feed {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgb(185, 185, 185);
+    background-color: #dddddd;
+    height: 45vh;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.event-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    background-color: #dddddd;
+    height: 40vh;
+    width: 30.5vw;
+    margin: 10px;
+    margin-top: -20px;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.event-label {
+    border-style: solid;
+    border-color: rgb(99, 99, 99);
+    border-width: 0px 0px 1px 0px;
+    width: 30.5vw;
+    height: 10vh;
+}
+
+.text-event-label {
+    padding-top: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.events {
+    width: 30.5vw;
+    height: 30vh;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background-color: #c4203a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.overlay-content textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    resize: none;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.change-cover,
+.change-pfp {
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.change-cover:hover,
+.change-pfp:hover {
+    box-shadow: 0 0 10px black;
+    
+}
+
+.save-button,
+.cancel-button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+}
+
+.save-button {
+    background-color: #ccc;
+    color: black;
+    margin-right: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.save-button:Before{
+    content: '';
+    background: linear-gradient(90deg, transparent, #c4203a, transparent);
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 200px;
+    height: 100%;
+    transition: all 1.5s ease;
+    z-index: -1;
+}
+
+.save-button:hover:Before{
+    left: 125%;
+}
+
+.cancel-button:Before{
+    content: '';
+    background: linear-gradient(90deg, transparent, #c4203a, transparent);
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 200px;
+    height: 100%;
+    transition: all 1.5s ease;
+    z-index: -1;
+}
+
+.cancel-button:hover:Before{
+    left: 125%;
+}
+
+.redeem-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.redeem-overlay .overlay-content {
+    background-color: #c4203a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.points-displayy{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    size: 30px;
+    color:black;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.reward-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.reward-button {
+    flex: 0 0 calc(25% - 10px);
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgb(0, 0, .5);
+    size: 15px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.reward-button:hover {
+    box-shadow: 0 0 30px black;
+}
+
+.reward-button img {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px; 
+    text-align: left;
+}
+
+.close-redeem-button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s, border-color 0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.close-redeem-button:before{
+    content: '';
+    background: linear-gradient(90deg, transparent, #c4203a, transparent);
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 150px;
+    height: 100%;
+    transition: all 1.5s ease;
+    z-index: -1;
+}
+
+.close-redeem-button:hover:before {
+    left: 125%;
+}
+
+
